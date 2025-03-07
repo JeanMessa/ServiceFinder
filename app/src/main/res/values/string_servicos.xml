@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="servicos">
+        <item>Pedreiro</item>
+        <item>Encanador</item>
+        <item>Eletricista</item>
+        <item>Manutenção de Computadores</item>
+        <item>Manutenção de Celulares</item>
+        <item>Costureiro</item>
+        <item>Soldador</item>
+        <item>Mecânico</item>
+        <item>Funileiro</item>
+        <item>Borracheiro</item>
+        <item>Vidraceiro</item>
+        <item>Manutenção de Eletrodomésticos</item>
+        <item>Manutenção de Ar-Condicionado</item>
+        <item>Reparo de Objetos</item>
+        <item>Editor de Mídias</item>
+        <item>Designer Digital</item>
+        <item>Designer de Interiores</item>
+        <item>Fotógrafo</item>
+        <item>Guia Turístico</item>
+        <item>Segurança</item>
+        <item>Faxineiro</item>
+        <item>Jardineiro</item>
+        <item>Podador</item>
+        <item>Professor de Linguagens</item>
+        <item>Professor de Exatas</item>
+        <item>Professor de Humanas</item>
+        <item>Professor de Tecnologia</item>
+        <item>Professor Outros</item>
+        <item>Animador de Festa</item>
+        <item>Garçom</item>
+        <item>Manutenção de Telefonia</item>
+        <item>Manutenção de Bicicletas</item>
+        <item>Montador de Móveis</item>
+        <item>Cabeleireiro</item>
+        <item>Maquiador</item>
+        <item>Manicure</item>
+        <item>Pedicure</item>
+        <item>Massagista</item>
+        <item>Cozinheiro</item>
+        <item>Babá</item>
+        <item>Carpinteiro</item>
+        <item>Arquiteto</item>
+        <item>Pintor</item>
+    </string-array>
+
+</resources>

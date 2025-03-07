@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnFotoGaleria"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escolher Foto da Galeria"
+        android:textAllCaps="false"
+        android:textColor="@color/TextoPadrao"
+        app:icon="@drawable/image_fill_24"
+        app:iconGravity="end"
+        app:iconSize="30dp"
+        app:iconTint="#09911A" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/TextoPadrao" />
+
+    <Button
+        android:id="@+id/btnFotoCamera"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tirar Foto"
+        android:textAllCaps="false"
+        android:textColor="@color/TextoPadrao"
+        app:icon="@drawable/photo_camera_fill_24"
+        app:iconGravity="end"
+        app:iconSize="30dp"
+        app:iconTint="@color/PretoOuBranco" />
+
+</LinearLayout>

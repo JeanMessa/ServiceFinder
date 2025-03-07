@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/BrancoOuPreto"
+    android:gravity="center|center_vertical"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_margin="5dp"
+            android:backgroundTint="@android:color/transparent"
+            app:cardCornerRadius="300dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgFotoPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:backgroundTint="@color/AzulSecundario"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/person_24" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewNome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_weight="4"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/PretoOuBranco"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Nome Sobrenome" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_weight="0.5"
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewNaoLidas"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/AzulSecundario"
+                    app:cardCornerRadius="100dp">
+
+                    <TextView
+                        android:id="@+id/textViewNaoLidas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:padding="2dp"
+                        android:singleLine="false"
+                        android:textColor="@color/Branco"
+                        android:textSize="16sp"
+                        app:autoSizeMaxTextSize="16sp"
+                        app:autoSizeTextType="uniform"
+                        tools:text="99+" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnChat"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/chat_bubble_24"
+                app:tint="@color/AzulPrincipalouSecundario" />
+
+            <ImageButton
+                android:id="@+id/btnPerfil"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/person_24"
+                app:tint="@color/AzulPrincipalouSecundario" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="@color/AzulSecundario" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/AzulSecundario" />
+
+</LinearLayout>

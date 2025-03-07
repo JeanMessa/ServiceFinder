@@ -1,0 +1,12 @@
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <shape android:shape="oval">
+      <solid android:color="@color/AzulSecundario"/>
+    </shape>
+  </item>
+    <item android:drawable="@drawable/home_24">
+      <color android:color="@color/Branco"/>
+    </item>
+</layer-list>
+

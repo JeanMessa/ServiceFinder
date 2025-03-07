@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".cadastro.ActivityCadastro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/txtNome"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:ems="10"
+            android:hint="Digite seu nome"
+            android:importantForAutofill="no"
+            android:inputType="text|textPersonName|textCapSentences"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewErroNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/VermelhoErro"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sobrenome"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/txtSobrenome"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:ems="10"
+            android:hint="Digite seu sobrenome"
+            android:importantForAutofill="no"
+            android:inputType="text|textPersonName|textCapSentences"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewErroSobrenome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/VermelhoErro"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layoutCPF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CPF"
+                android:textSize="25sp" />
+
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/txtCPF"
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:ems="10"
+                android:hint="Digite Seu CPF"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textSize="18sp"
+                app:mask="###.###.###-##"
+                app:maskCharacter="#"
+                app:maskStyle="normal" />
+
+            <TextView
+                android:id="@+id/textViewErroCPF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/VermelhoErro"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:ems="10"
+            android:hint="@string/digite_seu_email"
+            android:importantForAutofill="no"
+            android:inputType="text|textEmailAddress"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewErroEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/VermelhoErro"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layoutSenha"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/senha"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/txtSenha"
+                    android:layout_width="fill_parent"
+                    android:layout_height="86dp"
+                    android:ems="10"
+                    android:hint="@string/digite_sua_senha"
+                    android:importantForAutofill="no"
+                    android:inputType="text|textPassword"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="58dp"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/btnVisualizarSenha"
+                    android:layout_width="58dp"
+                    android:layout_height="64dp"
+                    android:layout_alignEnd="@id/txtSenha"
+                    android:layout_alignBottom="@id/txtSenha"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="@string/visualizar_senha"
+                    android:src="@drawable/visibility_24"
+                    android:textAlignment="viewStart" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textViewErroSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/VermelhoErro"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirme Sua Senha"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/txtConfirmarSenha"
+                    android:layout_width="fill_parent"
+                    android:layout_height="86dp"
+                    android:ems="10"
+                    android:hint="@string/digite_sua_senha"
+                    android:importantForAutofill="no"
+                    android:inputType="text|textPassword"
+                    android:paddingEnd="58dp"
+                    android:textSize="18sp"
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageButton
+                    android:id="@+id/btnVisualizarConfirmarSenha"
+                    android:layout_width="58dp"
+                    android:layout_height="64dp"
+                    android:layout_alignEnd="@id/txtConfirmarSenha"
+                    android:layout_alignBottom="@id/txtConfirmarSenha"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="@string/visualizar_senha"
+                    android:src="@drawable/visibility_24"
+                    android:textAlignment="viewStart" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textViewErroConfimarSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/VermelhoErro"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnContinuar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:text="Continuar"
+            android:textColor="@color/Branco"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

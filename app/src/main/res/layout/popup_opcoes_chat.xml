@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/PretoOuBranco"
+    android:orientation="vertical"
+    android:padding="1.5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/BrancoOuPreto"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/PretoOuBranco"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btnPerfil"
+            style="@style/Widget.Material3.Button.IconButton.Outlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:minWidth="0dip"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="Ver Perfil"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/TextoPadrao"
+            app:icon="@drawable/person_24"
+            app:iconGravity="end"
+            app:iconSize="30dp"
+            app:iconTint="@color/AzulSecundario" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/PretoOuBranco" />
+
+        <Button
+            android:id="@+id/btnBloquear"
+            style="@style/Widget.Material3.Button.IconButton.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:minWidth="0dip"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="Bloquear"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/TextoPadrao"
+            app:icon="@drawable/block_24"
+            app:iconGravity="end"
+            app:iconSize="30dp"
+            app:iconTint="#C62929" />
+    </LinearLayout>
+
+</LinearLayout>

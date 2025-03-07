@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    android:backgroundTint="#00FFFFFF"
+    android:backgroundTintMode="add"
+    android:orientation="vertical"
+    tools:context=".ActivityLogin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/AzulPrincipal"
+        android:gravity="center"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/sf_logomarca" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:ems="10"
+                android:hint="@string/digite_seu_email"
+                android:importantForAutofill="no"
+                android:inputType="text|textEmailAddress"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/senha"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtSenha"
+                    android:layout_width="fill_parent"
+                    android:layout_height="86dp"
+                    android:ems="10"
+                    android:hint="@string/digite_sua_senha"
+                    android:importantForAutofill="no"
+                    android:inputType="text|textPassword"
+                    android:paddingEnd="58dp"
+                    android:textSize="18sp"
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageButton
+                    android:id="@+id/btnVisualizarSenha"
+                    android:layout_width="58dp"
+                    android:layout_height="64dp"
+                    android:layout_alignEnd="@id/txtSenha"
+                    android:layout_alignBottom="@id/txtSenha"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="@string/visualizar_senha"
+                    android:src="@drawable/visibility_24"
+                    android:textAlignment="viewStart" />
+
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/btnEntrar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:onClick="entrar"
+                android:text="@string/entrar"
+                android:textColor="@color/Branco"
+                android:textSize="22sp"
+                app:iconGravity="end" />
+
+            <Button
+                android:id="@+id/btnAlterarSenha"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/alterar_senha"
+                android:textColor="@color/AzulSecundario"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/btnCriarConta"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/AzulSecundario"
+                android:onClick="abrirActivityCadastro"
+                android:text="@string/criar_conta"
+                android:textColor="@color/Branco"
+                android:textSize="22sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

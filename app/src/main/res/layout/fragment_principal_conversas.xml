@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".principal.FragmentPrincipalConversas">
+
+    <LinearLayout
+
+        android:id="@+id/layoutPesquisa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/AzulSecundario"
+        android:backgroundTint="@color/AzulSecundario"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <EditText
+                android:id="@+id/txtNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/Branco"
+                android:ems="10"
+                android:hint="Busque pelo nome do contato"
+                android:inputType="text"
+                android:paddingEnd="30dp"
+                android:textColor="@color/Branco"
+                android:textColorHint="@color/HintConversas"
+                android:textCursorDrawable="@color/Branco" />
+
+            <ImageButton
+                android:id="@+id/btnLimparNome"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_alignEnd="@id/txtNome"
+                android:layout_alignBottom="@id/txtNome"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/close_24"
+                android:visibility="gone"
+                app:tint="@color/Branco"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listConversas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_conversas"
+        tools:visibility="gone">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/textViewAviso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/voce_nao_possui_nenhum_contato_inicie_conversas_primeiro"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+
+</LinearLayout>

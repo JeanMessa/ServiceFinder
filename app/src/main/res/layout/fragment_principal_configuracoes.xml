@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewConfiguracoes"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".principal.FragmentPrincipalConfiguracoes">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Configurações Gerais"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:minHeight="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="Cidade Padrão:"
+                android:textSize="20sp"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeTextType="uniform" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spinnerCidade"
+                style="@style/SpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:backgroundTint="@color/BrancoOuPreto"
+                android:singleLine="true"
+                android:text="Localização"
+                android:textSize="16sp"
+                android:theme="@style/SpinnerStyle"
+                app:ms_dropdown_height="400dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:minHeight="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="Tema da Aplicação:"
+                android:textSize="20sp"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeTextType="uniform" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spinnerTema"
+                style="@style/SpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:backgroundTint="@color/BrancoOuPreto"
+                android:singleLine="true"
+                android:text="Tema do Dispositivo"
+                android:textSize="16sp"
+                android:theme="@style/SpinnerStyle"
+                app:ms_dropdown_height="400dp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchDiaAtualAgenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:buttonTint="@color/AzulPrincipalouSecundario"
+            android:drawableTint="@color/AzulPrincipal"
+            android:minHeight="48dp"
+            android:text="Filtrar Agenda Para o Dia Atual"
+            android:textColor="@color/TextoPadrao"
+            android:textSize="20sp"
+            android:theme="@style/SwitchConfig" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Notificações"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchNotificacaoAgenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:buttonTint="@color/AzulPrincipalouSecundario"
+            android:checked="true"
+            android:drawableTint="@color/AzulPrincipal"
+            android:minHeight="48dp"
+            android:text="Agenda"
+            android:textColor="@color/TextoPadrao"
+            android:textSize="20sp"
+            android:theme="@style/SwitchConfig" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchNotificacaoChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:checked="true"
+            android:minHeight="48dp"
+            android:text="Chat"
+            android:textColor="@color/TextoPadrao"
+            android:textSize="20sp"
+            android:theme="@style/SwitchConfig" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Solicitar Confirmação"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchConfirmacaoOcultar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:buttonTint="@color/AzulPrincipalouSecundario"
+            android:checked="true"
+            android:drawableTint="@color/AzulPrincipal"
+            android:minHeight="48dp"
+            android:text="Ocultar Mensagem"
+            android:textColor="@color/TextoPadrao"
+            android:textSize="20sp"
+            android:theme="@style/SwitchConfig" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchConfirmacaoExcluir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:buttonTint="@color/AzulPrincipalouSecundario"
+            android:checked="true"
+            android:drawableTint="@color/AzulPrincipal"
+            android:minHeight="48dp"
+            android:text="Excluir Mensagem"
+            android:textColor="@color/TextoPadrao"
+            android:textSize="20sp"
+            android:theme="@style/SwitchConfig" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchConfirmacaoBloquear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:buttonTint="@color/AzulPrincipalouSecundario"
+            android:checked="true"
+            android:drawableTint="@color/AzulPrincipal"
+            android:minHeight="48dp"
+            android:text="Bloquear/Desbloquear Usuários"
+            android:textColor="@color/TextoPadrao"
+            android:textSize="20sp"
+            android:theme="@style/SwitchConfig" />
+
+        <Button
+            android:id="@+id/btnBloqueados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="Bloqueados"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/TextoPadrao"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:icon="@drawable/keyboard_arrow_down_24"
+            app:iconGravity="textEnd"
+            app:iconSize="30dp"
+            app:iconTint="@color/PretoOuBranco"
+            tools:visibility="visible" />
+
+        <com.tcc.tcc.view.ScrollListView
+            android:id="@+id/listBloqueados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:listitem="@layout/item_cadastro_prestador" />
+    </LinearLayout>
+</ScrollView>

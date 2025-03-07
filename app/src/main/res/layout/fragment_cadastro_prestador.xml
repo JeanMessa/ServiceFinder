@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:orientation="vertical"
+    tools:context=".cadastro.FragmentCadastroPrestador">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Você deseja se tornar um dos nossos prestadores de serviços?"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTipoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <RadioButton
+            android:id="@+id/radioCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Continuar como cliente"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioPrestador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tornar-se prestador de serviços"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/formularioPrestador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/PretoOuBranco"
+            android:minHeight="50dp"
+            android:orientation="vertical"
+            android:padding="1dp"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/AzulSecundario"
+                android:text="Serviços Prestados"
+                android:textAlignment="center"
+                android:textColor="@color/Branco"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Preto" />
+
+            <com.tcc.tcc.view.ScrollListView
+                android:id="@+id/listServico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Branco"
+                android:divider="@color/TextoFundoClaro"
+                android:dividerHeight="1dp"
+                android:visibility="visible"
+                tools:listitem="@layout/item_cadastro_prestador"
+                tools:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Branco"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAddServico"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adicionar Serviço"
+                    android:textColor="@color/AzulSecundario"
+                    android:textSize="18sp"
+                    app:icon="@android:drawable/ic_input_add"
+                    app:iconSize="18dp"
+                    app:iconTint="@color/AzulSecundario" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/PretoOuBranco"
+            android:minHeight="50dp"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/AzulSecundario"
+                android:text="Cidades de Atendimento"
+                android:textAlignment="center"
+                android:textColor="@color/Branco"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Preto" />
+
+
+            <com.tcc.tcc.view.ScrollListView
+                android:id="@+id/listCidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Branco"
+                android:divider="@color/TextoFundoClaro"
+                android:dividerHeight="1dp"
+                android:visibility="visible"
+                tools:listitem="@layout/item_cadastro_prestador"
+                tools:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Branco"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAddCidade"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adicionar Cidade"
+                    android:textColor="@color/AzulSecundario"
+                    android:textSize="18sp"
+                    app:icon="@android:drawable/ic_input_add"
+                    app:iconSize="18dp"
+                    app:iconTint="@color/AzulSecundario" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="Continuar"
+        android:textColor="@color/Branco"
+        android:textSize="22sp" />
+
+</LinearLayout>

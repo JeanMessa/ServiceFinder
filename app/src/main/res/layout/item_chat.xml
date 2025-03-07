@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textViewDia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="10/10/2010" />
+
+    <LinearLayout
+        android:id="@+id/layoutMensagem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewMensagem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:foregroundGravity="right|center_horizontal"
+            android:minWidth="125dp"
+            app:cardCornerRadius="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgMensagem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:maxHeight="200dp"
+                    android:minWidth="300dp"
+                    android:minHeight="150dp"
+                    android:visibility="gone"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <LinearLayout
+                    android:id="@+id/layoutArquivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imgIconeArquivo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:maxHeight="48dp"
+                        android:padding="0dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/description_24"
+                        app:tint="@color/PretoOuBranco" />
+
+                    <TextView
+                        android:id="@+id/textViewArquivo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@android:color/transparent"
+                        android:singleLine="false"
+                        android:textColor="@color/PretoOuBranco"
+                        android:textSize="20sp"
+                        tools:text="Exemplo.txt" />
+
+                    <ImageButton
+                        android:id="@+id/btnBaixarArquivo"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="5dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/download_24"
+                        app:tint="@color/PretoOuBranco" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:orientation="vertical"
+                    tools:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp">
+
+                        <ImageButton
+                            android:id="@+id/btnAudio"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:padding="0dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/play_arrow_24"
+                            app:tint="@color/PretoOuBranco" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBarAudio"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="25dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:maxWidth="150dp"
+                            android:minWidth="150dp"
+                            android:progressBackgroundTint="@color/PretoOuBranco"
+                            android:progressTint="@color/AzulPrincipal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="63dp"
+                        android:paddingEnd="0dp">
+
+                        <Chronometer
+                            android:id="@+id/chronometerDuracao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:textColor="@color/TextoPadrao"
+                            android:textSize="16sp"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/textViewDuracao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/transparent"
+                            android:textColor="@color/TextoPadrao"
+                            android:textSize="16sp"
+                            tools:text="/ 10:00" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewMensagem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:paddingStart="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="2dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/PretoOuBranco"
+                    android:textSize="22sp"
+                    tools:text="a"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/layoutAgendamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/layoutSimNao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/btnAceitarServico"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="5dp"
+                            android:backgroundTint="@color/AzulSecundario"
+                            android:text="@string/sim"
+                            android:textColor="@color/Branco"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/btnRecusarServico"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:backgroundTint="@color/AzulSecundario"
+                            android:text="@string/nao"
+                            android:textColor="@color/Branco"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnVerServico"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="@android:color/transparent"
+                            android:padding="0dp"
+                            android:text="Ver mais"
+                            android:textColor="@color/AzulSecundario"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutInformativo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/textViewHorario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="30dp"
+                    android:paddingBottom="5dp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/PretoOuBranco"
+                    android:textSize="17sp"
+                    tools:text="00:00" />
+
+                <LinearLayout
+                    android:id="@+id/layoutExcluir"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/btnExcluir"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/delete_24"
+                        app:tint="@color/TextoPadrao" />
+
+                    <ImageButton
+                        android:id="@+id/btnEsconder"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/visibility_off_24"
+                        app:tint="@color/TextoPadrao" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</LinearLayout>

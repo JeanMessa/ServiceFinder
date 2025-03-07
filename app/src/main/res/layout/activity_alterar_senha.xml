@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityAlterarSenha">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/AzulPrincipal"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:cardBackgroundColor="@color/AzulSecundario"
+            app:cardCornerRadius="100dp">
+
+            <ImageButton
+                android:id="@+id/btnVoltar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/arrow_back_24"
+                app:tint="@color/Branco" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/sf_logomarca" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        tools:context=".cadastro.FragmentCadastroFoto">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alterar_senha"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/layoutCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Código enviado para:  "
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                tools:text="testinho@123" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgIcone"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/mail_outline_24"
+            app:tint="@color/AzulSecundario"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textViewDescricaoEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/digite_o_email_da_conta"
+            android:textAlignment="center"
+            android:textSize="22sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/PretoOuBranco">
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@color/BrancoOuPreto"
+                android:backgroundTint="@color/BrancoOuPreto"
+                android:hint="Email"
+                android:importantForAutofill="no"
+                android:inputType="text|textEmailAddress"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/txtCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@color/BrancoOuPreto"
+                android:backgroundTint="@color/BrancoOuPreto"
+                android:ems="10"
+                android:hint="Código"
+                android:importantForAutofill="no"
+                android:inputType="text|textCapCharacters"
+                android:maxLength="8"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/layoutSenha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/txtSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/BrancoOuPreto"
+                    android:backgroundTint="@color/BrancoOuPreto"
+                    android:ems="10"
+                    android:hint="Senha"
+                    android:importantForAutofill="no"
+                    android:inputType="text|textPassword"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="30sp" />
+
+                <ImageButton
+                    android:id="@+id/btnVisualizarSenha"
+                    android:layout_width="58dp"
+                    android:layout_height="64dp"
+                    android:layout_alignEnd="@id/txtSenha"
+                    android:layout_alignBottom="@id/txtSenha"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="@string/visualizar_senha"
+                    android:src="@drawable/visibility_24"
+                    android:textAlignment="viewStart" />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/layoutConfirmarSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Digite sua nova senha novamente"
+                android:textAlignment="center"
+                android:textSize="22sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/PretoOuBranco">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp">
+
+                    <EditText
+                        android:id="@+id/txtConfirmarSenha"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@color/BrancoOuPreto"
+                        android:backgroundTint="@color/BrancoOuPreto"
+                        android:ems="10"
+                        android:hint="Senha"
+                        android:importantForAutofill="no"
+                        android:inputType="text|textPassword"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="30sp" />
+
+                    <ImageButton
+                        android:id="@+id/btnVisualizarConfirmarSenha"
+                        android:layout_width="58dp"
+                        android:layout_height="64dp"
+                        android:layout_alignEnd="@id/txtConfirmarSenha"
+                        android:layout_alignBottom="@id/txtConfirmarSenha"
+                        android:layout_marginBottom="8dp"
+                        android:backgroundTint="#00FFFFFF"
+                        android:contentDescription="@string/visualizar_senha"
+                        android:src="@drawable/visibility_24"
+                        android:textAlignment="viewStart" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnConfirmar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:text="Confirmar"
+            android:textColor="@color/Branco"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/btnReenviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/AzulSecundario"
+            android:text="Reenviar Código"
+            android:textColor="@color/Branco"
+            android:textSize="22sp"
+            android:visibility="gone"
+            app:icon="@drawable/replay_24"
+            app:iconGravity="textStart"
+            app:iconSize="30dp"
+            app:iconTint="@color/Branco" />
+
+        <Button
+            android:id="@+id/btnVoltarEtapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/AzulSecundario"
+            android:text="Voltar Etapa"
+            android:textColor="@color/Branco"
+            android:textSize="22sp"
+            android:visibility="gone"
+            app:icon="@drawable/arrow_back_24"
+            app:iconGravity="textStart"
+            app:iconSize="30dp"
+            app:iconTint="@color/Branco" />
+
+    </LinearLayout>
+
+</LinearLayout>

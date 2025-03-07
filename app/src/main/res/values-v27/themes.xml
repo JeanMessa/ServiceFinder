@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.TCC" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/AzulPrincipal</item>
+        <item name="android:background">@color/Fundo</item>
+        <item name="android:textColorHint">@color/Hint</item>
+        <item name="android:navigationBarColor">@color/Fundo</item>
+
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <item name="materialTimePickerTheme">@style/TimePicker</item>
+
+
+
+    </style>
+
+    <style name="SpinnerStyle" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:background">@color/BrancoOuPreto</item>
+    </style>
+
+    <style name="TabLayoutFundoTransparente" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="colorPrimary">@color/Branco</item>
+        <item name="colorOnSurfaceVariant">@color/Branco</item>
+    </style>
+
+
+
+
+
+
+    <style name="Calendario" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="android:datePickerStyle">@style/DatePickerStyle</item>
+        <item name="android:background">@null</item>
+        <item name="colorAccent">@color/AzulSecundario</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DialogButtonStyle</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/DialogButtonStyle</item>
+        <item name="android:textColorPrimaryInverse">@color/Branco</item> <!-- header date, month color && calendar text highlight color -->
+    </style>
+
+    <style name="DialogButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/AzulPrincipal</item> <!-- button text color -->
+    </style>
+
+    <style name="DatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="android:headerBackground">@color/AzulPrincipal</item> <!-- header background color -->
+    </style>
+
+
+
+
+    <!--     Time picker-->
+
+    <style name="TimePicker" parent="@style/ThemeOverlay.MaterialComponents.TimePicker">
+
+        <item name="materialClockStyle">@style/AppTheme.Widget.TimePicker.Clock</item>
+        <item name="colorPrimary">@color/AzulPrincipal</item>
+        <item name="colorSecondary">@color/AzulSecundario</item>
+        <item name="colorSurface">@color/Fundo</item>
+        <item name="colorOnSurface">@color/AzulPrincipal</item>
+        <item name="chipStyle">@style/chipStyle</item>
+        <item name="android:background">@null</item>
+
+    </style>
+
+    <style name="chipStyle" parent="Widget.MaterialComponents.TimePicker.Display">
+        <item name="android:textColor">@color/Branco</item>
+        <item name="chipBackgroundColor">@color/AzulSecundario</item>
+    </style>
+
+
+    <style name="AppTheme.Widget.TimePicker.Clock" parent="Widget.MaterialComponents.TimePicker.Clock">
+        <item name="clockFaceBackgroundColor">@color/AzulTerciario</item>
+        <item name="clockHandColor">@color/AzulSecundario</item>
+        <item name="clockNumberTextColor">@color/Branco</item>
+    </style>
+
+
+
+    <style name="SwitchConfig" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/AzulSecundario</item>
+        <item name="colorSwitchThumbNormal">@color/Preto</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="10dp"
+    android:paddingTop="5dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="5dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de Serviço"
+        android:textSize="20sp" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinnerServico"
+        style="@style/SpinnerStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/Branco"
+        android:backgroundTint="@color/BrancoOuPreto"
+        android:textSize="18sp"
+        android:theme="@style/SpinnerStyle"
+        app:ms_dropdown_height="200dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="10dp">
+
+                <EditText
+                    android:id="@+id/txtData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:importantForAutofill="no"
+                    android:inputType="none"
+                    android:minHeight="48dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="58dp"
+                    android:text="13/09/2024"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="58dp"
+                    android:layout_height="64dp"
+                    android:layout_alignEnd="@id/txtData"
+                    android:layout_alignBottom="@id/txtData"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/calendar_month_24"
+                    android:textAlignment="viewStart" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Horário"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="10dp">
+
+                <EditText
+                    android:id="@+id/txtHora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:importantForAutofill="no"
+                    android:inputType="none"
+                    android:minHeight="48dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="58dp"
+                    android:text="10:00"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="58dp"
+                    android:layout_height="64dp"
+                    android:layout_alignEnd="@id/txtHora"
+                    android:layout_alignBottom="@id/txtHora"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/schedule_24"
+                    android:textAlignment="viewStart" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrição"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txtDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/Branco"
+        android:backgroundTint="@color/BrancoOuPreto"
+        android:gravity="top"
+        android:hint="Digite informações relevantes sobre o serviço, exemplo: o que será feito, preço, forma de pagamento, etc."
+        android:inputType="text|textAutoComplete|textAutoCorrect|textCapSentences|textMultiLine"
+        android:padding="2dp"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnSolicitarAgendamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minHeight="60dp"
+        android:text="Solicitar Agendamento"
+        android:textColor="@color/Branco"
+        android:textSize="22sp"
+        app:icon="@drawable/send_24"
+        app:iconGravity="end"
+        app:iconSize="24dp"
+        app:iconTint="@color/Branco" />
+
+</LinearLayout>

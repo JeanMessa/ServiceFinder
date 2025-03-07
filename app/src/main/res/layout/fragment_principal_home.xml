@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".principal.FragmentPrincipalHome">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/AzulSecundario"
+        android:orientation="horizontal">
+
+        <com.google.android.material.tabs.TabLayout
+
+            android:id="@+id/tabFiltros"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/AzulSecundario"
+            android:theme="@style/TabLayoutFundoTransparente">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:icon="@drawable/filter_alt_24">
+
+            </com.google.android.material.tabs.TabItem>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/search_24" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/swap_vert_24" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:paddingEnd="5dp">
+
+            <Button
+                android:id="@+id/btnLimpar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:text="Limpar Filtros"
+                android:textColor="@color/Branco"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:icon="@drawable/close_24"
+                app:iconGravity="textEnd"
+                app:iconSize="22dp"
+                app:iconTint="@color/Branco"
+                app:tint="@color/Branco"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="false"
+        android:backgroundTint="@color/AzulTerciario">
+
+        <LinearLayout
+            android:id="@+id/layoutFiltro"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <Button
+                android:id="@+id/btnServico"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="18dp"
+                android:singleLine="true"
+                android:text="@string/servico"
+                android:textAllCaps="false"
+                android:textColor="@color/Branco"
+                android:textSize="18sp"
+                app:icon="@drawable/filter_alt_24"
+                app:iconTint="@color/Branco" />
+
+            <ImageButton
+                android:id="@+id/btnLimparServico"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:src="@drawable/close_24"
+                android:visibility="gone"
+                app:tint="@color/Branco"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/btnCidade"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:singleLine="true"
+                android:text="@string/cidade"
+                android:textAllCaps="false"
+                android:textColor="@color/Branco"
+                android:textSize="18sp"
+                app:icon="@drawable/filter_alt_24"
+                app:iconTint="@color/Branco" />
+
+            <ImageButton
+                android:id="@+id/btnLimparCidade"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:src="@drawable/close_24"
+                android:visibility="gone"
+                app:tint="@color/Branco"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+
+        android:id="@+id/layoutPesquisa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/AzulTerciario"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <EditText
+                android:id="@+id/txtNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/Branco"
+                android:ems="10"
+                android:hint="Nome do Prestador"
+                android:inputType="text"
+                android:paddingEnd="30dp"
+                android:textColor="@color/Branco"
+                android:textColorHint="@color/HintFundoEscuro"
+                android:textCursorDrawable="@color/Branco" />
+
+            <ImageButton
+                android:id="@+id/btnLimparNome"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_alignEnd="@id/txtNome"
+                android:layout_alignBottom="@id/txtNome"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/close_24"
+                android:visibility="gone"
+                app:tint="@color/Branco"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/layoutOrdenar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/AzulTerciario"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <com.google.android.material.tabs.TabLayout
+
+            android:id="@+id/tabOrdenar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/AzulTerciario"
+            android:scrollbarAlwaysDrawHorizontalTrack="false"
+            android:scrollbarAlwaysDrawVerticalTrack="false"
+            android:theme="@style/TabLayoutFundoTransparente"
+            app:tabInlineLabel="true"
+            app:tabMode="auto"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/arrow_drop_down_24"
+                android:pointerIcon="vertical_text"
+                android:text="Avaliação">
+
+            </com.google.android.material.tabs.TabItem>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qtd. Serviços" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewAviso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:text="Nenhum prestador com essas especificações foi encontrado, reveja seus filtros."
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPrestador"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_home_prestador">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

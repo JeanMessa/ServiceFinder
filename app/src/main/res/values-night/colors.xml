@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Fundo">#1C1C1C</color>
+    <color name="TextoPadrao">#FFCAC4D0</color>
+    <color name="PretoOuBranco">#FFFFFF</color>
+    <color name="BrancoOuPreto">#000000</color>
+    <color name="ItemSelecionado">@color/AzulSecundario</color>
+    <color name="AzulPrincipalouSecundario">@color/AzulSecundario</color>
+    <color name="AzulSecundarioouPrincipal">@color/AzulPrincipal</color>
+    <color name="VermelhoRemover">#F82F2F</color>
+    <color name="VermelhoSair">#C62929</color>
+    <color name="FundoMensagem">#424242</color>
+</resources>

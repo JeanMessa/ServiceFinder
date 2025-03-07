@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/AzulSecundario"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnData"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:layout_marginStart="5dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:padding="0dp"
+            android:text="Todos os dias"
+            android:textColor="@color/Branco"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:icon="@drawable/calendar_month_24"
+            app:iconGravity="start"
+            app:iconSize="25dp"
+            app:iconTint="@color/Branco" />
+
+        <ImageButton
+            android:id="@+id/btnLimparData"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@android:color/transparent"
+            android:padding="0dp"
+            android:src="@drawable/close_24"
+            android:visibility="gone"
+            app:tint="@color/Branco" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@android:color/transparent"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStatusServico"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_marginEnd="5dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:padding="0dp"
+                android:text="Status do Serviço"
+                android:textColor="@color/Branco"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:icon="@drawable/keyboard_arrow_down_24"
+                app:iconGravity="end"
+                app:iconSize="25dp"
+                app:iconTint="@color/Branco" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/AzulSecundario"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layoutStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/AzulSecundario"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBoxAceito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Aceito"
+                    android:textColor="@color/Branco"
+                    android:textSize="18sp"
+                    app:buttonIconTint="@color/Branco"
+                    app:buttonTint="@color/AzulPrincipal" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxConcluido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Concluído"
+                    android:textColor="@color/Branco"
+                    android:textSize="18sp"
+                    app:buttonIconTint="@color/Branco"
+                    app:buttonTint="@color/Branco" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBoxPendente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Pendente"
+                    android:textColor="@color/Branco"
+                    android:textSize="18sp"
+                    app:buttonIconTint="@color/Branco"
+                    app:buttonTint="@color/AzulPrincipal" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxCancelado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancelado"
+                    android:textColor="@color/Branco"
+                    android:textSize="18sp"
+                    app:buttonIconTint="@color/Branco"
+                    app:buttonTint="@color/Branco" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabResponsavelServico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/AzulTerciario"
+        android:paddingBottom="5dp"
+        android:theme="@style/TabLayoutFundoTransparente"
+        android:visibility="gone"
+        app:tabMode="auto"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:visibility="visible">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meus Serviços" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Serviços Contratados" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listAgenda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:listitem="@layout/item_agenda">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/textViewAviso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Você não tem nenhum serviço com essas especificações, tente trocar os filtros ou conseguir novos serviços."
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+</LinearLayout>

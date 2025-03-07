@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TCC" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/AzulPrincipal</item>
+        <item name="android:background">@color/Fundo</item>
+        <item name="android:navigationBarColor">@color/Fundo</item>
+        <item name="radioButtonStyle">@style/Widget.App.RadioButton</item>
+
+        <item name="materialTimePickerTheme">@style/TimePicker</item>
+    </style>
+
+    <style name="Widget.App.RadioButton" parent="@style/Widget.Material3.CompoundButton.RadioButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.RadioButton</item>
+    </style>
+
+    <style name="ThemeOverlay.App.RadioButton" parent="">
+        <item name="colorPrimary">@color/AzulSecundario</item>
+        <item name="colorOnSurface">@color/AzulSecundario</item>
+        <item name="colorSecondary">@color/AzulSecundario</item>
+    </style>
+
+
+
+
+
+    <style name="TimePicker" parent="@style/ThemeOverlay.MaterialComponents.TimePicker">
+        <item name="materialClockStyle">@style/AppTheme.Widget.TimePicker.Clock</item>
+        <item name="colorPrimary">@color/AzulSecundario</item>
+        <item name="colorSecondary">@color/AzulSecundario</item>
+        <item name="colorSurface">@color/Fundo</item>
+        <item name="colorOnSurface">@color/AzulSecundario</item>
+        <item name="chipStyle">@style/chipStyle</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="Calendario" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="android:datePickerStyle">@style/DatePickerStyle</item>
+        <item name="android:background">@null</item>
+        <item name="colorAccent">@color/AzulSecundario</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DialogButtonStyle</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/DialogButtonStyle</item>
+        <item name="android:textColorPrimaryInverse">@color/Branco</item>
+        <item name="android:textColorSecondaryInverse">@color/Branco</item>
+    </style>
+
+    <style name="DialogButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/AzulSecundario</item> <!-- button text color -->
+    </style>
+
+    <style name="DatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="android:headerBackground">@color/AzulSecundario</item> <!-- header background color -->
+    </style>
+
+    <style name="SwitchConfig" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/AzulSecundario</item>
+        <item name="colorSwitchThumbNormal">@color/Branco</item>
+        <item name="android:colorForeground">@color/TextoFundoEscuro</item>-->
+    </style>
+
+</resources>

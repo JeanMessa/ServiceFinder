@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Preto">#FF000000</color>
+    <color name="Branco">#FFFFFFFF</color>
+    <color name="AzulPrincipal">#23089C</color>
+    <color name="AzulSecundario">#0D75F3</color>
+    <color name="AzulPrincipalouSecundario">@color/AzulPrincipal</color>
+    <color name="AzulSecundarioouPrincipal">@color/AzulSecundario</color>
+    <color name="AzulTerciario">#0C5BBA</color>
+    <color name="Fundo">#DADADA</color>
+    <color name="Hint">#605F5F</color>
+    <color name="HintFundoEscuro">#C1C0C0</color>
+    <color name="HintConversas">#ECE9E9</color>
+    <color name="VermelhoErro">#B62222</color>
+    <color name="VerdeCorreto">#0E6E1A</color>
+    <color name="TextoPadrao">#FF49454F</color>
+    <color name="TextoFundoClaro">#FF49454F</color>
+    <color name="TextoFundoEscuro">#FFCAC4D0</color>
+    <color name="PretoOuBranco">#000000</color>
+    <color name="BrancoOuPreto">#FFFFFF</color>
+    <color name="Galeria">#09911A</color>
+    <color name="ItemSelecionado">#66C1FD</color>
+    <color name="VermelhoRemover">#B62222</color>
+    <color name="AmareloAlerta">#E9AF02</color>
+    <color name="AmareloAvaliacao">#E9AF02</color>
+    <color name="VermelhoSair">#590202</color>
+    <color name="FundoMensagem">#ffffff</color>
+
+</resources>

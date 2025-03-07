@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:paddingStart="0dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="5dp">
+
+        <ImageButton
+            android:id="@+id/btnFechar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="@color/VermelhoRemover"
+            app:tint="@color/VermelhoRemover" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <TextView
+            android:id="@+id/textViewTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="Manutenção de Computadores" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:text="Prestador:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewPrestador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textSize="20sp"
+                tools:text="Joãozinho da Silva" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:text="Cliente:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textSize="20sp"
+                tools:text="Joãozinho da Silva" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:text="Horário:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textSize="20sp"
+                tools:text="12/12/2012 21:30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutFinalizado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:text="Encerrado:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewHorarioFinalizado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textSize="20sp"
+                tools:text="12/12/2012 21:30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:text="Status:"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="20sp"
+                    tools:text="Pendente" />
+
+                <ImageView
+                    android:id="@+id/imgStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    tools:srcCompat="@drawable/pending_24" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Descrição"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.tcc.tcc.view.ScrollViewMaxHeight
+                android:id="@+id/scrollViewDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewDescricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/BrancoOuPreto"
+                    android:textSize="20sp"
+                    tools:text="Exemplo descrição" />
+            </com.tcc.tcc.view.ScrollViewMaxHeight>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutAvaliacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+
+            <TextView
+                android:id="@+id/textViewAvaliacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Avalie o Serviço Prestado"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/ratingAvaliacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/AmareloAvaliacao" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAvaliar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/AzulSecundario"
+                android:text="Enviar Avaliação"
+                android:textColor="@color/Branco"
+                android:textSize="22sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnConcluir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Concluir Serviço"
+            android:textColor="@color/Branco"
+            android:textSize="22sp"
+            android:visibility="gone"
+            app:icon="@drawable/check_24"
+            app:iconGravity="textEnd"
+            app:iconSize="25dp"
+            app:iconTint="@color/Branco"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Cancelar Serviço"
+            android:textColor="@color/Branco"
+            android:textSize="22sp"
+            android:visibility="gone"
+            app:icon="@drawable/close_24"
+            app:iconGravity="textEnd"
+            app:iconSize="25dp"
+            app:iconTint="@color/Branco"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/layoutPendente"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <Button
+                android:id="@+id/btnAceitar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Aceitar Serviço"
+                android:textColor="@color/Branco"
+                android:textSize="22sp"
+                android:visibility="visible"
+                app:icon="@drawable/check_24"
+                app:iconGravity="textEnd"
+                app:iconSize="25dp"
+                app:iconTint="@color/Branco" />
+
+            <Button
+                android:id="@+id/btnRecusar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Recusar Serviço"
+                android:textColor="@color/Branco"
+                android:textSize="22sp"
+                android:visibility="visible"
+                app:icon="@drawable/close_24"
+                app:iconGravity="textEnd"
+                app:iconSize="25dp"
+                app:iconTint="@color/Branco" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
