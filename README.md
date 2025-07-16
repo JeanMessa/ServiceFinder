@@ -6,7 +6,7 @@ O projeto se trate de um aplicativo android desenvolvido em Java com o objetivo 
 
 <h3>Home</h3>
 
-  A home conta com uma lista que através de filtros e ordenações facilita para o cliente o encontro do prestador de serviços ideal, para isso existem filtros por nome, cidade e serviço, com ordenções por nome, avaliação e quantidade de serviços prestados, podendo optar por ordem crescente ou decrescente.
+  A home conta com uma lista que através de filtros e ordenações facilita para o cliente o encontro do prestador de serviços ideal, para isso existem filtros por nome, cidade e serviço, com ordenações por nome, avaliação e quantidade de serviços prestados, podendo optar por ordem crescente ou decrescente.
 <p align="center">
 <img src="https://github.com/user-attachments/assets/aee4c6e4-7837-4308-a46f-8e69e9f055d7" width="20%" >
 </p>
